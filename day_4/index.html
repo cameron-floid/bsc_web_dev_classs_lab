@@ -1,0 +1,542 @@
+<html>
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;1,100&family=Noto+Color+Emoji&family=Roboto:wght@400;900&display=swap"
+        rel="stylesheet">
+    <title>Facebook | Home</title>
+
+    <style>
+        html {
+            padding: 0;
+            margin: 0;
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            font-family: 'Noto Color Emoji', sans-serif;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: auto;
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+            flex: 1;
+        }
+
+        .col-4 {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 40%;
+            flex: .4;
+        }
+
+
+        .col-5 {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 50%;
+            flex: .5;
+        }
+
+        .col-6 {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 60%;
+            flex: .6;
+        }
+
+        .col-8 {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 80%;
+            flex: .8;
+        }
+
+        .col-75 {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 75%;
+            flex: .75;
+        }
+
+        .col-8 {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 80%;
+            flex: .8;
+        }
+
+        .col-2 {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 20%;
+            flex: .2;
+        }
+
+        .col-25 {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 25%;
+            flex: .25;
+        }
+
+        .header {
+            width: auto;
+            color: white;
+            background-color: #4267B2;
+            padding: 10px;
+        }
+
+        .logo-text {
+            font-weight: 900;
+            font-size: 50px;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .intro {
+            margin: 0 40px 50px;
+        }
+
+        .intro-text {
+            font-weight: 900;
+            font-size: 32px;
+            color: #4267B2;
+            margin: 0 0 20px;
+        }
+
+        .intro-img {
+            width: 80%;
+            height: auto;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+
+        .label-col {
+            text-align: right;
+        }
+
+        .input-col {
+            text-align: left;
+            width: 100%;
+        }
+
+        select {
+            width: 100px;
+            margin-right: 5px;
+        }
+
+        .caption-text p {
+            margin: 0;
+        }
+
+        .caption-text a {
+            text-decoration: none;
+        }
+
+        .signup-btn {
+            padding: 5px;
+            color: white;
+            background-color: green;
+            width: 150px;
+        }
+
+        .form-intro h2 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #4267B2;
+            margin: 0;
+        }
+
+        .form-intro p {
+            font-size: 19px;
+            font-weight: 500;
+            color: #30487c;
+            margin: 8px 0;
+        }
+
+        .form-row {
+            margin: 10px;
+            text-align: center;
+        }
+
+        hr {
+            margin: 10px 0;
+            color: black;
+            background-color: black;
+        }
+
+        .signup-form hr {
+            margin: 20px 0;
+        }
+
+        .forgot-pass-link {
+            margin-top: 10px;
+        }
+
+        .forgot-pass-link a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .stay-logged-in-row {
+            margin-top: 10px;
+        }
+
+        .page-body {
+            margin: 50px;
+        }
+
+        .login-btn {
+            padding: 3px;
+            margin-top: 23px;
+            color: white;
+            background-color: #4267B2;
+        }
+
+        .login-col {
+            margin-right: 10px;
+        }
+
+        .main-content {
+            background-color: #EEF5FF;
+            margin: 10px;
+        }
+
+        footer {
+            padding: 10px;
+        }
+
+        .languages {
+            font-size: 15px;
+            font-weight: 600;
+            color: #4267B2;
+            margin-top: -60px;
+            margin-bottom: -20px;
+        }
+
+        .languages ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .languages li {
+            margin: 0 10px;
+        }
+
+        .languages li a {
+            text-decoration: none;
+            /* color: #4267B2; */
+        }
+
+        .create-page-link {
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main-content">
+
+        <div class="header">
+
+            <div class="row">
+
+                <div class="col col-6">
+
+                    <p class="logo-text">facebook</p>
+
+                </div>
+
+                <div class="col col-4 forms-row">
+
+                    <form action="login.php" method="post">
+
+                        <div class="row">
+
+                            <div class="col-4 login-col">
+
+                                <label>Email</label>
+                                <input type="text" name="email">
+                                <div class="row stay-logged-in-row">
+                                    <input type="checkbox">
+                                    <label>Keep me logged in</label>
+                                </div>
+
+                            </div>
+
+                            <div class="col-4 login-col">
+
+                                <label>Password</label>
+                                <input type="password" name="password">
+                                <div class="row">
+                                    <p class="forgot-pass-link">
+                                        <a href="">Forgot your password?</a>
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="col-25 login-col">
+                                <button class="login-btn" type="submit">Log In</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row page-body">
+
+            <div class="col col-6">
+
+                <div class="intro">
+                    <p class="intro-text">Facebook helps you connect and share with the people in your life.</p>
+                    <img class="intro-img center" src="assets/facebook.svg" />
+                </div>
+
+            </div>
+
+            <div class="col col-4">
+
+                <div class="form-intro">
+
+                    <h2>Sign Up</h2>
+                    <p>It's free and always will be</p>
+
+                </div>
+
+                <div class="signup-form">
+
+                    <hr>
+
+                    <form action="signup.php" method="post">
+
+                        <div class="row form-row">
+
+                            <div class="label-col col-25"><label>First Name: </label></div>
+                            <div class="input-col col-75"><input name="f-name" type="text"></div>
+
+                        </div>
+
+                        <div class="row form-row">
+
+                            <div class="label-col col-25"><label>Last Name: </label></div>
+                            <div class="input-col col-75"><input name="l-name" type="text"></div>
+
+                        </div>
+
+                        <div class="row form-row">
+
+                            <div class="label-col col-25"><label>Your Email: </label></div>
+                            <div class="input-col col-75"><input name="email" type="email"></div>
+
+                        </div>
+
+                        <div class="row form-row">
+
+                            <div class="label-col col-25"><label>Re-enter Email: </label></div>
+                            <div class="input-col col-75"><input name="verify-email" type="email"></div>
+
+                        </div>
+
+                        <div class="row form-row">
+
+                            <div class="label-col col-25"><label>New Password </label></div>
+                            <div class="input-col col-75"><input name="password" type="password"></div>
+
+                        </div>
+
+                        <div class="row form-row">
+
+                            <div class="label-col col-25"><label>I am: </label></div>
+                            <div class="input-col col-75">
+                                <select name="gender">
+                                    <option value="" disabled selected>Select Sex</option>
+                                    <option value="female">Female</option>
+                                    <option value="male">Male</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="row form-row">
+
+                            <div class="label-col col-25"><label>Birthday: </label></div>
+                            <div class="input-col col-75">
+                                <div class="row">
+
+                                    <select name="month">
+                                        <option value="" disabled selected>Month</option>
+                                        <option value="1">January</option>
+                                        <option value="2">February</option>
+                                        <option value="3">March</option>
+                                        <option value="4">April</option>
+                                        <option value="5">May</option>
+                                        <option value="6">June</option>
+                                        <option value="7">July</option>
+                                        <option value="8">August</option>
+                                        <option value="9">September</option>
+                                        <option value="10">October</option>
+                                        <option value="11">November</option>
+                                        <option value="12">December</option>
+                                    </select>
+
+                                    <select name="day">
+                                        <option value="" disabled selected>Day</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">9</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">19</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="31">31</option>
+                                    </select>
+
+                                    <select name="year">
+                                        <option value="" disabled selected>Year</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                    </select>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row form-row">
+
+                            <div class="label-col col-25"></div>
+                            <div class="input-col col-75 caption-text">
+                                <p>
+                                    <a href="">Why do I need to provide my birthday?</a>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="row form-row">
+
+                            <div class="label-col col-25"></div>
+                            <div class="input-col col-75 terms-acceptance">
+                                <p>By clicking Sign Up, you agree to our Terms and that you have read and understood our
+                                    Data Use Policy</p>
+                            </div>
+
+                        </div>
+
+                        <div class="row form-row">
+
+                            <div class="label-col col-25"></div>
+                            <div class="input-col col-75 signup-btn-col">
+                                <button class="signup-btn" type="submit">Sign Up</button>
+                            </div>
+
+                        </div>
+
+
+                    </form>
+
+                    <hr>
+
+                    <div class="row">
+                        <p class="center"><a class="create-page-link" href=""><strong>Create a Page</strong></a> for a
+                            celebrity, brand or
+                            business.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+<footer>
+    <div class="languages">
+
+        <div class="row">
+
+            <div class="col-6">
+
+                <ul>
+                    <li lang="en">English (US)</li>
+                    <li lang="es">Español</li>
+                    <li lang="nl">Português (Brasil)</li>
+                    <li lang="it">Français (France)</li>
+                    <li lang="it">Deutsch</li>
+                    <li lang="it">Italiano</li>
+                    <li lang="ar">العربية</li>
+                    <li lang="hi">हिन्दी</li>
+                    <li lang="zh">中文</li>
+                    <li lang="ja">日本語</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+    <hr>
+</footer>
+
+</html>
