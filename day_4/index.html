@@ -38,49 +38,6 @@
             flex: 1;
         }
 
-        .col-4 {
-            display: flex;
-            flex-direction: column;
-            flex-basis: 40%;
-            flex: .4;
-        }
-
-
-        .col-5 {
-            display: flex;
-            flex-direction: column;
-            flex-basis: 50%;
-            flex: .5;
-        }
-
-        .col-6 {
-            display: flex;
-            flex-direction: column;
-            flex-basis: 60%;
-            flex: .6;
-        }
-
-        .col-8 {
-            display: flex;
-            flex-direction: column;
-            flex-basis: 80%;
-            flex: .8;
-        }
-
-        .col-75 {
-            display: flex;
-            flex-direction: column;
-            flex-basis: 75%;
-            flex: .75;
-        }
-
-        .col-8 {
-            display: flex;
-            flex-direction: column;
-            flex-basis: 80%;
-            flex: .8;
-        }
-
         .col-2 {
             display: flex;
             flex-direction: column;
@@ -93,6 +50,27 @@
             flex-direction: column;
             flex-basis: 25%;
             flex: .25;
+        }
+
+        .col-4 {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 40%;
+            flex: .4;
+        }
+
+        .col-6 {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 60%;
+            flex: .6;
+        }
+
+        .col-75 {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 75%;
+            flex: .75;
         }
 
         .header {
@@ -117,7 +95,7 @@
         .intro-text {
             font-weight: 900;
             font-size: 32px;
-            color: #4267B2;
+            color: #204287;
             margin: 0 0 20px;
         }
 
@@ -447,12 +425,9 @@
                                         <option value="31">31</option>
                                     </select>
 
-                                    <select name="year">
+                                    <select id="year">
                                         <option value="" disabled selected>Year</option>
-                                        <option value="2015">2015</option>
-                                        <option value="2016">2016</option>
-                                        <option value="2017">2017</option>
-                                        <option value="2018">2018</option>
+                                        <!-- <option value="2015">2024</option> -->
                                     </select>
 
                                 </div>
@@ -538,5 +513,20 @@
     </div>
     <hr>
 </footer>
+
+<script>
+
+    const currentYear = new Date().getFullYear();
+    const yearSelect = document.getElementById('year');
+
+    // Add options for the last 110 years
+    for (let year = currentYear; year >= currentYear - 110; year--) {
+        const option = document.createElement('option');
+        option.value = year;
+        option.text = year;
+        yearSelect.add(option);
+    }
+    
+</script>
 
 </html>
